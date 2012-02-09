@@ -24,6 +24,9 @@ gem 'rails-backbone'
 gem 'mime'
 gem 'ruby-gmail', require: 'gmail'
 
+# Juggernaut for REALTIME
+gem 'juggernaut'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

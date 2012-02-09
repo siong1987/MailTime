@@ -10,6 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require juggernaut
 //= require jquery
 //= require jquery_ujs
 //= require underscore
@@ -18,5 +19,6 @@
 //= require backbone_datalink
 //= require backbone/mailtime
 //= require libs/d3
-//= require libs/d3.time
+//= require libs/protovis
 //= require_tree .
+

@@ -11,3 +11,73 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+  font: normal 20px 'Yanone Kaffeesatz', serif;
+  width: 700px;
+  margin: auto;
+}
+
+#clock {
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+}
+
+#clock div {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  color: #ddd;
+  font: 10px sans-serif;
+}
+
+#clock a {
+  color: #fff;
+  font-weight: bold;
+}
+
+form {
+  margin: auto;
+  width: 200px;
+}
+
+button {
+  float: right;
+}
+
+#title {
+  width: 700px;
+  text-align: center;
+  font: normal 140px 'Yanone Kaffeesatz', serif;
+}
+
+#links {
+  width: 700px;
+  text-align: center;
+  font: normal 20px 'Yanone Kaffeesatz', serif;
+  display: none;
+}
+
+#links a {
+  text-decoration: none;
+}
+
+#links a:hover {
+  text-decoration: underline;
+}
+
+text {
+  font: bold 13px sans-serif;
+}
+
+span {
+  width: 100%;
+}
+
+span svg {
+  margin: 10px auto;
+  width: 700px;
+}
+
