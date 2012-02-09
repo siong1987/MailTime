@@ -10,18 +10,26 @@ class UsersController < ApplicationController
 
     # parsing received emails
     gmail.inbox.emails.each do |m|
-      Juggernaut.publish(["/update/#{params[:username]}"], {count: 1}.to_json)
+      begin
+        Juggernaut.publish(["/update/#{params[:username]}"], {count: 1}.to_json)
 
-      timestamp = m.date.to_time.to_i
-      received_timestamps << timestamp
+        timestamp = m.date.to_time.to_i
+        received_timestamps << timestamp
+      rescue
+        next
+      end
     end
 
     # parsing sent emails
     gmail.in_label('[Gmail]/Sent Mail').emails.each do |m|
-      Juggernaut.publish(["/update/#{params[:username]}"], {count: 1}.to_json)
+      begin
+        Juggernaut.publish(["/update/#{params[:username]}"], {count: 1}.to_json)
 
-      timestamp = m.date.to_time.to_i
-      sent_timestamps << timestamp
+        timestamp = m.date.to_time.to_i
+        sent_timestamps << timestamp
+      rescue
+        next
+      end
     end
 
     #3000.times do |i|
