@@ -1,4 +1,11 @@
-# This file is used by Rack-based servers to start the application.
+require './app'
 
-require ::File.expand_path('../config/environment',  __FILE__)
-run Mailtime::Application
+# I'm leaning more towards not mounting the sprockets rack application and just relying on the precompiler with guard.
+# If you want to mount the Sprockets Rack Application, uncomment the following lines:
+# map "/assets" do
+#   run App.sprockets
+# end
+
+map "/" do
+  run App
+end

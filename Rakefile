@@ -1,7 +1,15 @@
-#!/usr/bin/env rake
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+task :environment do
+  require './app'
+end
 
-require File.expand_path('../config/application', __FILE__)
+namespace :assets do
+  desc "Compile all the assets"
+  task :precompile => :environment do
+    raise "Not implemented yet"
+  end
 
-Mailtime::Application.load_tasks
+  desc "Remove compiled assets"
+  task :clean => :environment do
+    raise "Not implemented yet"
+  end
+end
