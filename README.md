@@ -1,6 +1,9 @@
-# Sinatra with Sprockets 2 (Asset Pipeline)
+# MailTime
 
-An example sinatra app configured with the sprockets 2 asset pipeline. A custom guard file is available to run the asset pipeline precompiler whenever an asset changes.
+MailTime is an app that digs into your GMail account in order to find some patterns within it. For now, MailTime is able to:
+
+1. Show you when you recieve/send the most emails weekly/daily.
+2. Show you the best time to send someone email. (TODO)
 
 To run:
 
